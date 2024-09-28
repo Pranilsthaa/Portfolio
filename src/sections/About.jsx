@@ -22,8 +22,8 @@ const variants = (delay) => ({
 const cardVariants = (index) => {
   const initialVar = {
     0: { x: -80, opacity: 0.8 },
-    2: { y: -80, opacity: 0.8 },
-    1: { x: 80, opacity: 0.8 },
+    1: { y: -80, opacity: 0.8 },
+    2: { x: -80, opacity: 0.8 },
     3: { y: 80, opacity: 0.8 },
     default: { x: -80, opacity: 0.8 },
   };
@@ -95,7 +95,7 @@ const Card = (item, index) => {
 
 const About = () => {
   return (
-    <div className="lg:min-h-[700px] lg:w-[90%] pl-10 sm:w-[full] py-10">
+    <div className="lg:min-h-[700px] lg:w-[90%] px-10 sm:w-[full] py-10">
       <motion.h1
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="initial"

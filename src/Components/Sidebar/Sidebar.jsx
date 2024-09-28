@@ -71,11 +71,11 @@ function Sidebar({ activeLink, active }) {
         ))}
       </ul>
       <button
-        className="mt-40 ml-32 dark:bg-black bg-gray-700 border-none  text-white flex items-center justify-center border rounded-full w-10 h-10"
+        className="mt-40 ml-32 dark:bg-black bg-gray-700 border-none text-white flex items-center justify-center border rounded-full w-12 h-12"
         onClick={() => setIsDark()}
       >
         {isDark ? (
-          <IoIosSunny size={25} color="yellow" />
+          <IoIosSunny size={28} color="yellow" />
         ) : (
           <FaMoon size={20} color="white" />
         )}
