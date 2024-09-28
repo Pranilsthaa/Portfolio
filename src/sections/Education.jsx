@@ -81,7 +81,7 @@ const Education = () => {
   };
 
   return (
-    <div className="min-h-[600px] pt-20 pl-10">
+    <div className="min-h-[600px] pt-20 px-10">
       <motion.h1
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8 select-none"
         initial={{ x: -80, opacity: 0.5 }}

@@ -94,7 +94,7 @@ const Work = () => {
     setFilteredWork(filteredWork);
   }
   return (
-    <div className="min-h-[680px] pl-10 pt-20 mb-10">
+    <div className="min-h-[680px] px-10 pt-20 mb-10">
       <motion.h1
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8 select-none"
         initial="hidden"
@@ -146,7 +146,7 @@ const Work = () => {
           {filteredWork.map((item, index) => (
             <motion.div
               key={index}
-              className="flex flex-col gap-y-4 bg-white h-[320px] p-6 shadow-sm"
+              className="flex flex-col overflow-hidden gap-y-4 bg-white h-[320px] p-6 shadow-sm"
               initial={
                 index % 2 === 0
                   ? { x: -80, opacity: 0.6 }

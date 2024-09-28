@@ -44,7 +44,7 @@ const childVariants = {
 
 const Contact = () => {
   return (
-    <div className="min-h-[650px] pl-10">
+    <div className="min-h-[700px] px-10 pb-20">
       <motion.h1
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="initial"
@@ -61,7 +61,7 @@ const Contact = () => {
       >
         CONTACT
       </motion.h2>
-      <div className="flex flex-col gap-x-4 sm:flex-row sm:gap-y-4">
+      <div className="flex flex-col gap-x-4 sm:flex-row gap-y-4">
         {/*info*/}
         <motion.div
           className="flex-1 max-w-[400px] grid grid-rows-3 gap-y-4 min-h-[350px]"
