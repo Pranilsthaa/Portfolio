@@ -3,6 +3,7 @@ import { TbWorldWww } from "react-icons/tb";
 import { IoPhonePortrait } from "react-icons/io5";
 import { IoLogoFigma } from "react-icons/io5";
 import { FaGoogle } from "react-icons/fa";
+import { useThemeStore } from "../Store/useStore";
 
 let logo = [TbWorldWww, IoPhonePortrait, IoLogoFigma, FaGoogle];
 
@@ -21,10 +22,10 @@ const variants = (delay) => ({
 const cardVariants = (index) => {
   const initialVar = {
     0: { x: -80, opacity: 0.8 },
-    1: { x: 80, opacity: 0.8 },
     2: { y: -80, opacity: 0.8 },
+    1: { x: 80, opacity: 0.8 },
     3: { y: 80, opacity: 0.8 },
-    default: { x: 80, opacity: 0.8 },
+    default: { x: -80, opacity: 0.8 },
   };
 
   const initial = initialVar[index] || initialVar.default;

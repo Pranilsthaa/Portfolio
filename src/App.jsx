@@ -60,7 +60,7 @@ function App() {
         {/* <HamIcon /> */}
       </div>
       <div
-        className="relative bg-gray-100 dark:bg-[#121212] pr-[10%]"
+        className="relative bg-gray-100 dark:bg-[#121212] lg:pr-[10%]"
         // style={{ maxWidth: "calc(100% - 250px)" }}
       >
         <div

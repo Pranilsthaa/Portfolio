@@ -126,7 +126,7 @@ const Services = () => {
         SOME OF MY EXPERTISE
       </h2>
       <div
-        className="grid grid-cols-3 gap-y-20 gap-x-24 "
+        className="grid lg:grid-cols-3 gap-y-20 gap-x-24 "
         style={{ maxWidth: "89.5%" }}
       >
         {cardData.map((item, index) => (
