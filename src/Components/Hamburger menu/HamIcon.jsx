@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
-import Sidebar from "../Sidebar/Sidebar";
 
 function HamIcon() {
   const [isClicked, setIsClicked] = useState(false);
@@ -28,8 +27,6 @@ function HamIcon() {
           <RxCross2 color="black" size={26} />
         </div>
       </div>
-
-      {window.innerWidth < 768 && <Sidebar active={isClicked} />}
     </>
   );
 }

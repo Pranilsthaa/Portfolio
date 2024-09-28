@@ -17,7 +17,6 @@ const navLinks = [
 ];
 
 function Sidebar({ activeLink, active }) {
-  const [viewSidebar, setViewSidebar] = useState(active);
   const isDark = useThemeStore((state) => state.isDark);
   const setIsDark = useThemeStore((state) => state.setIsDark);
   let windowWidth = window.innerWidth;
@@ -33,16 +32,9 @@ function Sidebar({ activeLink, active }) {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }, [isDark]);
 
-  useEffect(() => {
-    setViewSidebar(active);
-  }, [active]);
-
   return (
     <div
-      className={`bg-[#efefef] dark:bg-[#1F1F1F] fixed min-w-[250px] min-h-[100lvh] flex flex-col items-center z-20 pt-[3rem] transition-ease duration-500 ${
-        windowWidth < 768 &&
-        (viewSidebar ? "translate-x-0" : "-translate-x-full")
-      }`}
+      className={`bg-[#efefef] dark:bg-[#1F1F1F] fixed min-w-[250px] min-h-[100lvh] flex flex-col items-center z-20 pt-[3rem] transition-ease duration-500 sm:flex hidden`}
     >
       <img
         src={myPIC}
@@ -61,7 +53,7 @@ function Sidebar({ activeLink, active }) {
           <li key={link.name} className="group flex flex-col items-center">
             <a
               href={link.href}
-              onClick={() => setViewSidebar((p) => !p)}
+              // onClick={() => setViewSidebar((p) => !p)}
               className={`${
                 activeLink === `nav_link_${index}`
                   ? "text-blue-500"
@@ -79,7 +71,7 @@ function Sidebar({ activeLink, active }) {
         ))}
       </ul>
       <button
-        className="fixed dark:bg-black bg-gray-700 border-none bottom-4 left-[320px] text-white flex items-center justify-center border rounded-full w-10 h-10"
+        className="mt-40 ml-32 dark:bg-black bg-gray-700 border-none  text-white flex items-center justify-center border rounded-full w-10 h-10"
         onClick={() => setIsDark()}
       >
         {isDark ? (

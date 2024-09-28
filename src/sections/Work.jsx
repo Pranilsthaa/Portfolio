@@ -128,8 +128,8 @@ const Work = () => {
             key={index}
             variants={LIvariants}
             onClick={() => filter(item, index)}
-            className={`cursor-pointer select-none ${
-              index == selected ? "text-blue-500" : ""
+            className={`cursor-pointer select-none dark:text-white ${
+              index == selected ? "text-blue-500 dark:text-blue-500" : ""
             }`}
           >
             {item}

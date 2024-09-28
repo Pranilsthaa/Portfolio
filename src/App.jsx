@@ -55,17 +55,17 @@ function App() {
 
   return (
     <div className="dark:bg-[#292929]">
-      <div className="relative left-[125px] ">
+      <div className="relative min-w-[250px]">
         <Sidebar activeLink={activeLink} />
-        <HamIcon />
+        {/* <HamIcon /> */}
       </div>
       <div
-        className="relative left-[250px] bg-gray-100 dark:bg-[#121212]"
-        style={{ maxWidth: "calc(100% - 250px)" }}
+        className="relative bg-gray-100 dark:bg-[#121212] pr-[10%]"
+        // style={{ maxWidth: "calc(100% - 250px)" }}
       >
         <div
-          className="max-w-[1920px] mx-auto"
-          style={{ maxWidth: "calc(100% - 250px)", position: "relative" }}
+          className="max-w-[1920px] mx-auto lg:ml-[250px]"
+          // style={{ maxWidth: "calc(100% - 250px)", position: "relative" }}
         >
           <div id="home" ref={homeRef}>
             <Home windowWidth={windowWidth} />

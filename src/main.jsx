@@ -8,8 +8,10 @@ function Root() {
   const isDark = useThemeStore((state) => state.isDark); // Get the isDark state
 
   return (
-    <div className={isDark ? "dark" : ""}>
-      <App />
+    <div className={`${isDark ? "dark" : ""} `}>
+      <div className="dark:bg-[#292929] lg:pl-[10%]">
+        <App />
+      </div>
     </div>
   );
 }

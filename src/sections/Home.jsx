@@ -16,7 +16,7 @@ function Home() {
   }, [activeDiv]);
 
   return (
-    <div className="relative max-w-screen gap-x-60 min-h-[700px] flex flex-row justify-start">
+    <div className="relative max-w-screen gap-x-60 min-h-[700px] flex flex-row lg:justify-start justify-center">
       <div className="flex flex-col md:items-center lg:items-start justify-center dark:text-white">
         {activeDiv ? (
           <motion.section
@@ -58,10 +58,11 @@ function Home() {
           </motion.div>
         )}
       </div>
-      <div className="img mt-12">
+      <div className="img mt-12 w-full">
         <img
           src="/images/pp_png.png"
           alt=""
+          width="350px"
           style={{ height: "100vh", resize: "contain" }}
         />
       </div>
