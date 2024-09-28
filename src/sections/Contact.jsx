@@ -15,6 +15,33 @@ const variants = (delay) => ({
   },
 });
 
+const parentVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    x: -20,
+    y: 10,
+  },
+  visible: {
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 const Contact = () => {
   return (
     <div className="min-h-[650px] pl-10">
@@ -27,7 +54,7 @@ const Contact = () => {
         Get In Touch
       </motion.h1>
       <motion.h2
-        className="mb-10 font-poppins text-3xl"
+        className="mb-10 font-poppins text-3xl dark:text-white"
         initial="initial"
         whileInView="animate"
         variants={variants(0.06)}
@@ -35,8 +62,17 @@ const Contact = () => {
         CONTACT
       </motion.h2>
       <div className="flex flex-col gap-x-4 sm:flex-row sm:gap-y-4">
-        <div className="flex-1 max-w-[400px] grid grid-rows-3 gap-y-4 min-h-[350px]">
-          <div className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden">
+        {/*info*/}
+        <motion.div
+          className="flex-1 max-w-[400px] grid grid-rows-3 gap-y-4 min-h-[350px]"
+          initial="initial"
+          whileInView="visible"
+          variants={parentVariants}
+        >
+          <motion.div
+            className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden"
+            variants={childVariants}
+          >
             <div
               className="bg-[#efefef] h-full flex items-center justify-center"
               style={{ flex: 1 }}
@@ -46,8 +82,11 @@ const Contact = () => {
             <div className="" style={{ flex: 2 }}>
               pranilstha322@gmail.com
             </div>
-          </div>
-          <div className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden">
+          </motion.div>
+          <motion.div
+            className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden"
+            variants={childVariants}
+          >
             <div
               style={{ flex: 1 }}
               className="bg-[#efefef] h-full flex items-center justify-center"
@@ -55,8 +94,11 @@ const Contact = () => {
               <FaMapLocationDot size={50} color="black" />
             </div>
             <p style={{ flex: 2 }}>Tilottama-15, Lumbini Province, Nepal</p>
-          </div>
-          <div className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden">
+          </motion.div>
+          <motion.div
+            className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden"
+            variants={childVariants}
+          >
             <div
               style={{ flex: 1 }}
               className="bg-[#efefef] h-full flex items-center justify-center"
@@ -64,8 +106,9 @@ const Contact = () => {
               <FaPhone size={50} color="black" />
             </div>
             <p style={{ flex: 2 }}>+977 9847016459</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+        {/*----------------------*/}
         <div className="form flex-1">
           <form className="grid gap-y-4">
             <input type="text" placeholder="Name" className="h-12 pl-4" />

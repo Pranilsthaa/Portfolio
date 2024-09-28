@@ -94,7 +94,7 @@ const Education = () => {
         Education
       </motion.h1>
       <motion.h1
-        className="mb-10 font-poppins text-3xl select-none"
+        className="mb-10 font-poppins text-3xl select-none dark:text-white"
         initial={{ x: -40, y: 10 }}
         whileInView={{
           x: 0,

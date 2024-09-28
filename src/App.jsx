@@ -54,13 +54,13 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className="relative left-[125px]">
+    <div className="dark:bg-[#292929]">
+      <div className="relative left-[125px] ">
         <Sidebar activeLink={activeLink} />
         <HamIcon />
       </div>
       <div
-        className="relative left-[250px] bg-gray-100"
+        className="relative left-[250px] bg-gray-100 dark:bg-[#121212]"
         style={{ maxWidth: "calc(100% - 250px)" }}
       >
         <div
@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -122,7 +122,9 @@ const Services = () => {
       <h1 className="tracking-[3px] text-[#6F6D6F] font-medium mb-8">
         What I Do ?
       </h1>
-      <h2 className="mb-20 font-poppins text-3xl">SOME OF MY EXPERTISE</h2>
+      <h2 className="mb-20 font-poppins text-3xl dark:text-white">
+        SOME OF MY EXPERTISE
+      </h2>
       <div
         className="grid grid-cols-3 gap-y-20 gap-x-24 "
         style={{ maxWidth: "89.5%" }}

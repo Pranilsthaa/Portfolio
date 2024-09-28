@@ -7,13 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'poppins' : ["Poppins", "sans-serif"],
-        'playfair' : ["Playfair Display", "serif"],
+        'poppins': ["Poppins", "sans-serif"],
+        'playfair': ["Playfair Display", "serif"],
       },
-      width:{
+      width: {
         'screen-minus-sidebar': 'calc(100vw - var(--sidebar-width))',
       }
     },
   },
   plugins: [],
+  darkMode: 'class',
 }

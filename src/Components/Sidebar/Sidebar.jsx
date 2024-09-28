@@ -2,6 +2,9 @@
 import myPIC from "/images/pp.jpg";
 import npFLAG from "/images/np.png";
 import { useEffect, useState } from "react";
+import { useThemeStore } from "../../Store/useStore";
+import { IoIosSunny } from "react-icons/io";
+import { FaMoon } from "react-icons/fa";
 
 const navLinks = [
   { name: "HOME", href: "#home" },
@@ -15,13 +18,28 @@ const navLinks = [
 
 function Sidebar({ activeLink, active }) {
   const [viewSidebar, setViewSidebar] = useState(active);
+  const isDark = useThemeStore((state) => state.isDark);
+  const setIsDark = useThemeStore((state) => state.setIsDark);
   let windowWidth = window.innerWidth;
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setIsDark(savedTheme === "dark");
+    }
+  }, [setIsDark]);
+
+  useEffect(() => {
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, [isDark]);
+
   useEffect(() => {
     setViewSidebar(active);
   }, [active]);
+
   return (
     <div
-      className={`bg-[#efefef] fixed min-w-[250px] min-h-[100lvh] flex flex-col items-center z-20 pt-[3rem] transition-ease duration-500 ${
+      className={`bg-[#efefef] dark:bg-[#1F1F1F] fixed min-w-[250px] min-h-[100lvh] flex flex-col items-center z-20 pt-[3rem] transition-ease duration-500 ${
         windowWidth < 768 &&
         (viewSidebar ? "translate-x-0" : "-translate-x-full")
       }`}
@@ -31,7 +49,7 @@ function Sidebar({ activeLink, active }) {
         alt="profile picture"
         className="rounded-full min-h-[135px] max-w-[135px] mb-[20px]"
       />
-      <h1 className="mb-[10px] text-2xl font-playfair font-bold">
+      <h1 className="mb-[10px] dark:text-white text-2xl font-playfair font-bold">
         Pranil Shrestha
       </h1>
       <h2 className="mb-[20px] flex gap-2">
@@ -45,7 +63,9 @@ function Sidebar({ activeLink, active }) {
               href={link.href}
               onClick={() => setViewSidebar((p) => !p)}
               className={`${
-                activeLink === `nav_link_${index}` ? "text-blue-500" : ""
+                activeLink === `nav_link_${index}`
+                  ? "text-blue-500"
+                  : "dark:text-white text-slate-700"
               } `}
             >
               {link.name}
@@ -58,6 +78,16 @@ function Sidebar({ activeLink, active }) {
           </li>
         ))}
       </ul>
+      <button
+        className="fixed dark:bg-black bg-gray-700 border-none bottom-4 left-[320px] text-white flex items-center justify-center border rounded-full w-10 h-10"
+        onClick={() => setIsDark()}
+      >
+        {isDark ? (
+          <IoIosSunny size={25} color="yellow" />
+        ) : (
+          <FaMoon size={20} color="white" />
+        )}
+      </button>
     </div>
   );
 }

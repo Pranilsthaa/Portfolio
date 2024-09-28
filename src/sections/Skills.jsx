@@ -75,14 +75,14 @@ function Skills() {
         My Specialty
       </motion.h1>
       <motion.h2
-        className="mb-10 font-poppins text-3xl"
+        className="mb-10 font-poppins text-3xl dark:text-white"
         initial="initial"
         whileInView="animate"
         variants={variants(0.06)}
       >
         My SKILLS
       </motion.h2>
-      <p className="text-slate-600">
+      <p className="text-slate-600 dark:text-slate-200">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
         aliquam autem numquam eligendi, provident asperiores perferendis
         nesciunt. Iste corporis perferendis fugiat voluptates neque provident
@@ -93,7 +93,7 @@ function Skills() {
       <div className="grid grid-cols-2 gap-x-2 gap-y-5 mt-10">
         {skillsData.map((skill) => (
           <div key={skill.id}>
-            <p>{skill.title}</p>
+            <p className="dark:text-white">{skill.title}</p>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{

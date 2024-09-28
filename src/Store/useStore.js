@@ -1,14 +1,13 @@
-// import { useEffect } from "react";
-// import { create } from "zustand";
+import { create } from "zustand";
 
-// useWindowWidth = create((set) => ({
-//     const getScreenWidth = () => {
-//         setWindowWidth(window.innerWidth);
-//     };
+const getInitialTheme = () => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme === "dark";
+};
 
-//     useEffect(() => {
-//     window.addEventListener("resize", getScreenWidth);
-//     return() => window.removeEventListener("resize", getScreenWidth);
-// }, []);
-    
-// }));
+export const useThemeStore = create((set) => ({
+    isDark: getInitialTheme(),
+    setIsDark: (value) => {
+        set((state) => ({ isDark: value !== undefined ? value : !state.isDark }))
+    },
+}));

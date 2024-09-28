@@ -77,7 +77,7 @@ const Card = (item, index) => {
   }
   return (
     <motion.div
-      className={`flex bg-white shadow-slate-300 shadow-lg h-40 items-center p-4 ${borderBottom} border-b-2 select-none overflow-hidden`}
+      className={`flex bg-white shadow-slate-300 shadow-lg dark:shadow-gray-600 dark:shadow-md h-40 items-center p-4 ${borderBottom} border-b-2 select-none overflow-hidden`}
       initial="initial"
       whileInView="animate"
       variants={cardVariants(index)}
@@ -104,7 +104,7 @@ const About = () => {
         About Me
       </motion.h1>
       <motion.h2
-        className="mb-10 font-poppins text-3xl"
+        className="mb-10 font-poppins text-3xl  dark:text-white"
         initial="initial"
         whileInView="animate"
         variants={variants(0.05)}
@@ -112,24 +112,26 @@ const About = () => {
         WHO AM I ?
       </motion.h2>
       <motion.p
-        className=" tracking-widest text-slate-600"
+        className=" tracking-widest text-slate-600 dark:text-slate-200"
         initial="initial"
         whileInView="animate"
         variants={variants(0.08)}
       >
-        <span className="font-bold text-black">Hi, I am Pranil,</span> Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Ad dignissimos omnis
-        consequuntur vitae dolore officia et ab est amet repudiandae? Lorem
-        ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis sapiente
-        repellendus corporis ducimus placeat numquam natus a earum saepe?
-        Facilis eveniet pariatur voluptatibus! Quis ut deleniti rerum, fugit
-        quod sequi?
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed in
-          recusandae doloremque tempora exercitationem sint rerum quidem
-          voluptatibus a? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Quisquam, repellendus. Lorem ipsum dolor sit amet consectetur
-        </p>
+        <span className="font-bold text-black dark:text-white ">
+          Hi, I am Pranil,
+        </span>{" "}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dignissimos
+        omnis consequuntur vitae dolore officia et ab est amet repudiandae?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
+        sapiente repellendus corporis ducimus placeat numquam natus a earum
+        saepe? Facilis eveniet pariatur voluptatibus! Quis ut deleniti rerum,
+        fugit quod sequi?
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed in
+        recusandae doloremque tempora exercitationem sint rerum quidem
+        voluptatibus a? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, repellendus. Lorem ipsum dolor sit amet consectetur
       </motion.p>
       <div className="grid lg:grid-cols-4 grid-flow-row sm:grid-row-4 gap-4 mt-10">
         {aboutCardData.map((data, index) => Card(data, index))}
