@@ -17,6 +17,7 @@ const Info = () => {
           width: "100%",
           height: "250px",
           backgroundAttachment: "fixed",
+          WebkitBackgroundSize: "cover",
         }}
       >
         <div
