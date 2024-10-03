@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import myPIC from "/images/pp.jpg";
 import npFLAG from "/images/np.png";
-import { useEffect, useState } from "react";
-import { useThemeStore } from "../../Store/useStore";
+import { useEffect } from "react";
+import { useStore, useThemeStore } from "../../Store/useStore";
 import { IoIosSunny } from "react-icons/io";
 import { FaMoon } from "react-icons/fa";
 
@@ -16,11 +16,11 @@ const navLinks = [
   { name: "CONTACT", href: "#contact" },
 ];
 
-function Sidebar({ activeLink, active }) {
+function Sidebar({ activeLink }) {
   const isDark = useThemeStore((state) => state.isDark);
   const setIsDark = useThemeStore((state) => state.setIsDark);
-  let windowWidth = window.innerWidth;
-
+  const isHamIconClicked = useStore((state) => state.isHamIconClicked);
+  const setisHamIconClicked = useStore((state) => state.setisHamIconClicked);
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -34,7 +34,9 @@ function Sidebar({ activeLink, active }) {
 
   return (
     <div
-      className={`bg-[#efefef] dark:bg-[#1F1F1F] fixed min-w-[250px] min-h-[100lvh] flex flex-col items-center z-20 pt-[3rem] transition-ease duration-500 sm:flex hidden`}
+      className={`bg-[#efefef] dark:bg-[#1F1F1F] fixed min-w-[250px] min-h-[100lvh] flex flex-col items-center z-20 pt-[3rem] transition-ease duration-500 ${
+        isHamIconClicked ? "translate-x-0" : ""
+      } -translate-x-full  md:translate-x-0`}
     >
       <img
         src={myPIC}
@@ -53,7 +55,7 @@ function Sidebar({ activeLink, active }) {
           <li key={link.name} className="group flex flex-col items-center">
             <a
               href={link.href}
-              // onClick={() => setViewSidebar((p) => !p)}
+              onClick={() => setisHamIconClicked()}
               className={`${
                 activeLink === `nav_link_${index}`
                   ? "text-blue-500"

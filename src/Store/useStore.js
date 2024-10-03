@@ -11,3 +11,10 @@ export const useThemeStore = create((set) => ({
         set((state) => ({ isDark: value !== undefined ? value : !state.isDark }))
     },
 }));
+
+export const useStore = create((set) => ({
+    isHamIconClicked: false,
+    setisHamIconClicked: () => set((state) => ({
+        isHamIconClicked: !state.isHamIconClicked
+    })),
+}));
