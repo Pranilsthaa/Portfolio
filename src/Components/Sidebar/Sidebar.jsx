@@ -43,10 +43,10 @@ const Sidebar = ({ activeLink }, ref) => {
 
   useEffect(() => {
     if (isHamIconClicked) {
-      document.addEventListener("click", handleClick);
+      document.addEventListener("touchend", handleClick);
     }
     return () => {
-      document.removeEventListener("click", handleClick);
+      document.removeEventListener("touchend", handleClick);
     };
   }, [isHamIconClicked]);
 
