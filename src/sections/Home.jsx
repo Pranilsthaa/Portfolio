@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { GoDownload } from "react-icons/go";
 import { motion } from "framer-motion";
 import { useThemeStore } from "../Store/useStore";
@@ -14,7 +14,6 @@ function Home() {
 
     return () => clearInterval(divTransition);
   }, [activeDiv]);
-
   return (
     <div className="relative max-w-screen gap-x-60 min-h-[700px] flex flex-row lg:justify-start justify-center">
       <div className="flex flex-col md:items-center lg:items-start justify-center dark:text-white">

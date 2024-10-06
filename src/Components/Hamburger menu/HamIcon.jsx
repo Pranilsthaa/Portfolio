@@ -2,7 +2,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useStore, useThemeStore } from "../../Store/useStore";
 
-function HamIcon() {
+const HamIcon = () => {
   const isDark = useThemeStore((state) => state.isDark);
   const isHamIconClicked = useStore((state) => state.isHamIconClicked);
   const setisHamIconClicked = useStore((state) => state.setisHamIconClicked);
@@ -29,6 +29,6 @@ function HamIcon() {
       </div>
     </div>
   );
-}
+};
 
 export default HamIcon;

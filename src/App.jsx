@@ -57,9 +57,6 @@ function App() {
     <div className="dark:bg-[#292929]">
       <div className="relative min-w-[250px]">
         <Sidebar activeLink={activeLink} />
-        <div className="relative left-2 top-4">
-          <HamIcon />
-        </div>
       </div>
       <div className="relative bg-gray-100 dark:bg-[#121212] lg:pr-[10%]">
         <div className="max-w-[1920px] mx-auto lg:ml-[250px]">
