@@ -40,7 +40,6 @@ const Sidebar = ({ activeLink }, ref) => {
       setisHamIconClicked();
     }
   }
-
   useEffect(() => {
     if (isHamIconClicked) {
       document.addEventListener("touchend", handleClick);
