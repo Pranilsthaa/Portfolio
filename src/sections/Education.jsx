@@ -135,7 +135,7 @@ const Education = () => {
               >
                 {item.title}
               </motion.h1>
-              {show ? <FaMinus /> : <FaPlus />}
+              {show && selected == index ? <FaMinus /> : <FaPlus />}
             </motion.div>
             <AnimatePresence>
               {show && selected == index && <Card item={item} />}
