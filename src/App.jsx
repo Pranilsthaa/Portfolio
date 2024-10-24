@@ -58,7 +58,7 @@ function App() {
       <div className="relative min-w-[250px]">
         <Sidebar activeLink={activeLink} />
       </div>
-      <div className="relative bg-gray-100 dark:bg-[#121212] lg:pr-[10%]">
+      <div className="relative bg-gray-100 dark:bg-[#121212] lg:mr-[10%]">
         <div className="max-w-[1920px] mx-auto lg:ml-[250px]">
           <div id="home" ref={homeRef}>
             <Home windowWidth={windowWidth} />
