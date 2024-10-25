@@ -4,7 +4,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
-import { form } from "framer-motion/client";
+import { ScaleLoader } from "react-spinners";
 
 const variants = (delay) => ({
   hidden: {
@@ -62,6 +62,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   function handleTextChange(e) {
     const { name, value } = e.target;
@@ -71,6 +72,7 @@ const Contact = () => {
     }));
   }
   async function handleSubmit(e) {
+    setLoading(true);
     e.preventDefault();
     try {
       let response = await axios.post(
@@ -82,10 +84,12 @@ const Contact = () => {
       }
     } catch (e) {
       console.log(e);
+    } finally {
+      setLoading(false);
     }
   }
   return (
-    <div className="min-h-[700px] px-10 pb-20">
+    <div className="relative min-h-[700px] px-10 pb-20">
       <motion.h1
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="hidden"
@@ -163,6 +167,7 @@ const Contact = () => {
             className="h-12 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            required
           />
           <motion.input
             type="text"
@@ -171,6 +176,7 @@ const Contact = () => {
             className="h-12 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            required
           />
           <motion.input
             type="text"
@@ -179,6 +185,7 @@ const Contact = () => {
             className="h-12 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            required
           />
           <motion.textarea
             rows={5}
@@ -187,12 +194,17 @@ const Contact = () => {
             className="pt-4 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            required
           />
           <motion.button
             variants={childVariants1}
             className="bg-blue-600 max-w-[150px] shadow-lg rounded-sm h-10 text-white"
           >
-            Send Message
+            {loading ? (
+              <ScaleLoader loading={loading} item size={5} color="white" />
+            ) : (
+              "Send Message"
+            )}
           </motion.button>
         </motion.form>
       </motion.div>
