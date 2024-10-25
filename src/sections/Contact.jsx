@@ -5,6 +5,7 @@ import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
 import { ScaleLoader } from "react-spinners";
+import { Toaster, toast } from "sonner";
 
 const variants = (delay) => ({
   hidden: {
@@ -80,7 +81,13 @@ const Contact = () => {
         formData
       );
       if (response.status === 200) {
-        console.log("Email sent successfully");
+        toast.success("Email sent successfully");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
       }
     } catch (e) {
       console.log(e);
@@ -90,6 +97,7 @@ const Contact = () => {
   }
   return (
     <div className="relative min-h-[700px] px-10 pb-20">
+      <Toaster />
       <motion.h1
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="hidden"
@@ -167,6 +175,7 @@ const Contact = () => {
             className="h-12 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            value={formData.name}
             required
           />
           <motion.input
@@ -176,6 +185,7 @@ const Contact = () => {
             className="h-12 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            value={formData.email}
             required
           />
           <motion.input
@@ -185,6 +195,7 @@ const Contact = () => {
             className="h-12 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            value={formData.subject}
             required
           />
           <motion.textarea
@@ -194,6 +205,7 @@ const Contact = () => {
             className="pt-4 pl-4"
             variants={childVariants1}
             onChange={handleTextChange}
+            value={formData.message}
             required
           />
           <motion.button
