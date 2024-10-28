@@ -77,7 +77,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       let response = await axios.post(
-        "https://mailapi-x51k.onrender.com/submit",
+        "https://mailapi-production-c6d4.up.railway.app/submit",
         formData
       );
       if (response.status === 200) {
