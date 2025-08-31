@@ -19,8 +19,7 @@ const cardData = [
   {
     title: "Web Development",
     description:
-      "I can create a website from scratch using React, Next.js, and Gatsby.",
-
+      "I can build full-stack web applications using React, Express.js, and relational databases like PostgreSQL/MySQL.",
     color: "bg-violet-500",
     shadow: "shadow-violet-700",
     border: "border-b-violet-500",
@@ -28,39 +27,39 @@ const cardData = [
   {
     title: "App Development",
     description:
-      "I can create a mobile application using React Native and Flutter.",
+      "I can develop cross-platform mobile applications using React Native.",
     color: "bg-orange-500",
     shadow: "shadow-orange-700",
     border: "border-b-orange-500",
   },
   {
-    title: "App Development",
+    title: "UI/UX Design",
     description:
-      "I can design a website or application using Figma and Adobe XD.",
+      "I can design intuitive and modern user interfaces using Figma and Adobe XD.",
     color: "bg-green-500",
     shadow: "shadow-green-700",
     border: "border-b-green-500",
   },
   {
-    title: "Web Development",
+    title: "SEO Optimization",
     description:
-      "I can optimize your website so that it ranks higher on search engines.",
-    color: "bg-red-600",
-    shadow: "shadow-red-700",
-    border: "border-b-red-600",
-  },
-  {
-    title: "SEO",
-    description:
-      "I can optimize your website so that it ranks higher on search engines.",
+      "I can optimize websites to improve search engine rankings and overall visibility.",
     color: "bg-purple-500",
     shadow: "shadow-purple-700",
     border: "border-b-purple-500",
   },
   {
-    title: "UI/UX",
+    title: "Performance Optimization",
     description:
-      "I can optimize your website so that it ranks higher on search engines.",
+      "I can enhance website and application performance to ensure speed, scalability, and efficiency.",
+    color: "bg-red-600",
+    shadow: "shadow-red-700",
+    border: "border-b-red-600",
+  },
+  {
+    title: "Version Control & Collaboration",
+    description:
+      "I use Git and GitHub for version control, enabling effective collaboration and maintaining clean codebases.",
     color: "bg-yellow-400",
     shadow: "shadow-yellow-500",
     border: "border-b-yellow-400",

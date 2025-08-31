@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const skillsData = [
   {
     id: 1,
-    title: "HTML",
+    title: "React",
     progress: "90%",
     progressPercentage: "after:content-['90%']",
     bg: "bg-red-600",
@@ -11,7 +11,7 @@ const skillsData = [
   },
   {
     id: 2,
-    title: "REACT",
+    title: "REACT NATIVE",
     progress: "80%",
     progressPercentage: "after:content-['80%']",
     bg: "bg-green-500",
@@ -19,7 +19,7 @@ const skillsData = [
   },
   {
     id: 3,
-    title: "QBASIC",
+    title: "ExpressJS",
     progress: "70%",
     progressPercentage: "after:content-['70%']",
     bg: "bg-blue-500",
@@ -27,27 +27,19 @@ const skillsData = [
   },
   {
     id: 4,
-    title: "SEO",
-    progress: "40%",
-    progressPercentage: "after:content-['40%']",
+    title: "Framer Motion",
+    progress: "70%",
+    progressPercentage: "after:content-['50%']",
     bg: "bg-yellow-500",
     text: "text-yellow-500",
   },
   {
     id: 5,
     title: "UI/UX",
-    progress: "50%",
+    progress: "60%",
     progressPercentage: "after:content-['50%']",
     bg: "bg-purple-500",
     text: "text-purple-500",
-  },
-  {
-    id: 6,
-    title: "App Development",
-    progress: "70%",
-    progressPercentage: "after:content-['70%']",
-    bg: "bg-orange-500",
-    text: "text-orange-500",
   },
 ];
 

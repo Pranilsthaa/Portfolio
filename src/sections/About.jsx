@@ -113,26 +113,27 @@ const About = () => {
         WHO AM I ?
       </motion.h2>
       <motion.p
-        className=" tracking-widest text-slate-600 dark:text-slate-200"
-        initial="initial"
-        whileInView="animate"
-        variants={variants(0.08)}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
         <span className="font-bold text-black dark:text-white ">
           Hi, I am Pranil,
         </span>{" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dignissimos
-        omnis consequuntur vitae dolore officia et ab est amet repudiandae?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
-        sapiente repellendus corporis ducimus placeat numquam natus a earum
-        saepe? Facilis eveniet pariatur voluptatibus! Quis ut deleniti rerum,
-        fugit quod sequi?
+        a passionate developer with experience in building web and mobile
+        applications. I specialize in React, React Native, Express.js, and
+        databases like PostgreSQL/MySQL. I enjoy turning ideas into scalable and
+        user-friendly solutions.
         <br />
         <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed in
-        recusandae doloremque tempora exercitationem sint rerum quidem
-        voluptatibus a? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quisquam, repellendus. Lorem ipsum dolor sit amet consectetur
+        I have developed projects ranging from ERP systems to mobile
+        applications, focusing on clean UI, performance optimization, and smooth
+        user experience. Alongside development, I also work with tools like
+        Figma, Git/GitHub, and SEO optimization to ensure high-quality outcomes.
+        <br />
+        <br />
+        My goal is to keep learning and contributing to impactful projects that
+        combine technology with creativity to solve real-world problems.
       </motion.p>
       <div className="grid lg:grid-cols-4 grid-flow-row sm:grid-row-4 gap-4 mt-10">
         {aboutCardData.map((data, index) => Card(data, index))}

@@ -4,29 +4,19 @@ import { FaPlus, FaMinus } from "react-icons/fa6";
 
 const educationData = [
   {
-    title: "Bachelor's in Computer Science",
+    title: "Bachelor's in Information Technology",
     description:
-      "I am currently studying computer science at Kathmandu University.",
+      "I am currently pursuing my Bachelor's degree in Information Technology at ISMT College, Butwal.",
   },
   {
-    title: "High School",
+    title: "Plus 2 (Science)",
     description:
-      "I completed my high school from St. Xavier's College, Maitighar.",
+      "I completed my Plus 2 education in Science from St. Joseph College, Bhalwari.",
   },
   {
-    title: "Plus 2",
+    title: "School (Up to Grade 10)",
     description:
-      "I completed my high school from St. Xavier's College, Maitighar.",
-  },
-  {
-    title: "School",
-    description:
-      "I completed my high school from St. Xavier's College, Maitighar.",
-  },
-  {
-    title: "Lower Secondary",
-    description:
-      "I completed my high school from St. Xavier's College, Maitighar.",
+      "I completed my schooling up to grade 10 at Siddhartha Galaxy Public School, Tilottama-15, Kotihawa.",
   },
 ];
 
