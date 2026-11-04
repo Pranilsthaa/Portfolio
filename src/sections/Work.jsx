@@ -99,6 +99,7 @@ const Work = () => {
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8 select-none"
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         variants={variants}
       >
         My Work
@@ -114,6 +115,7 @@ const Work = () => {
             y: { delay: 0.5, ease: "easeInOut" },
           },
         }}
+        viewport={{ once: true }}
       >
         RECENT WORK
       </motion.h1>
@@ -121,6 +123,7 @@ const Work = () => {
         className="flex flex-row gap-x-4 lg:text-lg sm:text-sm"
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         variants={ULvariants}
       >
         {menus.map((item, index) => (
@@ -140,6 +143,7 @@ const Work = () => {
         className="mt-10 grid grid-cols-2 gap-x-16 gap-y-10"
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         variants={variants}
       >
         <AnimatePresence>

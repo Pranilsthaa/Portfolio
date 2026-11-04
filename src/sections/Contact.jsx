@@ -102,6 +102,7 @@ const Contact = () => {
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         variants={variants(0)}
       >
         Get In Touch
@@ -110,6 +111,7 @@ const Contact = () => {
         className="mb-10 font-poppins text-3xl dark:text-white"
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         variants={variants(0.2)}
       >
         CONTACT
@@ -121,7 +123,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="visible"
           variants={parentVariants}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           <motion.div
             className="border bg-white flex items-center justify-between gap-x-4 overflow-hidden"
@@ -165,6 +167,7 @@ const Contact = () => {
           className="flex-1 grid gap-y-4"
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           variants={parentVariants1}
           onSubmit={handleSubmit}
         >

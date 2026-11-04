@@ -90,7 +90,7 @@ const Card = ({ item, index }) => {
       whileInView="animate"
       custom={index}
       variants={variants}
-      // viewport={{ once: true }}
+      viewport={{ once: true }}
     >
       <div
         className={`absolute -top-[50px] flex justify-center items-center ${item.color}`}

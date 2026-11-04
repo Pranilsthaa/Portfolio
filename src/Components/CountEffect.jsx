@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 const CountEffect = ({ from = 0, to = 100, duration = 1 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   useEffect(() => {
     if (isInView) {
       const controls = animate(from, to, {

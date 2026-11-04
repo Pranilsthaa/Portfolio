@@ -82,7 +82,7 @@ const Card = (item, index) => {
       initial="initial"
       whileInView="animate"
       variants={cardVariants(index)}
-      // viewport={{ once: true }}
+      viewport={{ once: true }}
       key={index}
     >
       <div className="flex gap-x-4 items-center">
@@ -100,6 +100,7 @@ const About = () => {
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="initial"
         whileInView="animate"
+        viewport={{ once: true }}
         variants={variants(0)}
       >
         About Me
@@ -108,6 +109,7 @@ const About = () => {
         className="mb-10 font-poppins text-3xl  dark:text-white"
         initial="initial"
         whileInView="animate"
+        viewport={{ once: true }}
         variants={variants(0.05)}
       >
         WHO AM I ?

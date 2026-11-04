@@ -80,6 +80,7 @@ const Education = () => {
           opacity: 1,
           transition: { duration: 0.8, ease: "easeInOut" },
         }}
+        viewport={{ once: true }}
       >
         Education
       </motion.h1>
@@ -94,6 +95,7 @@ const Education = () => {
             y: { delay: 0.5, ease: "easeInOut" },
           },
         }}
+        viewport={{ once: true }}
       >
         EDUCATION
       </motion.h1>
@@ -101,7 +103,7 @@ const Education = () => {
         variants={parentVariants}
         initial="hidden"
         whileInView="visible"
-        // viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         {educationData.map((item, index) => (
           <motion.div key={index} variants={childVariants}>

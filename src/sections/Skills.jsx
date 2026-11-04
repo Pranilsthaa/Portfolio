@@ -62,6 +62,7 @@ function Skills() {
         className="tracking-[3px] text-sm text-[#6F6D6F] font-medium mb-8"
         initial="initial"
         whileInView="animate"
+        viewport={{ once: true }}
         variants={variants(0)}
       >
         My Specialty
@@ -70,6 +71,7 @@ function Skills() {
         className="mb-10 font-poppins text-3xl dark:text-white"
         initial="initial"
         whileInView="animate"
+        viewport={{ once: true }}
         variants={variants(0.06)}
       >
         My SKILLS
@@ -92,6 +94,7 @@ function Skills() {
                 width: skill.progress,
                 transition: { stiffness: 40, type: "spring" },
               }}
+              viewport={{ once: true }}
               className={`relative progress-bar flex items-center ${skill.bg} h-[6px] rounded-[8px] ${skill.progressPercentage} after:absolute after:-top-5 after:-right-0 after:text-xs ${skill.text} font-poppins `}
             >
               <div
