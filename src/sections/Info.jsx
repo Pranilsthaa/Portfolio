@@ -1,10 +1,30 @@
 import CountEffect from "../Components/CountEffect";
 
 const data = [
-  { to: 657, from: 400, duration: 2, label: "Number" },
-  { to: 1223, from: 1000, duration: 2, label: "Example" },
-  { to: 8772, from: 8300, duration: 2, label: "Testing" },
-  { to: 892, from: 850, duration: 5, label: "Coffee" },
+  {
+    to: 15,
+    from: 0,
+    duration: 2,
+    suffix: "+",
+    title: "Projects",
+    subtitle: "Completed",
+  },
+  {
+    to: 10,
+    from: 0,
+    duration: 2,
+    suffix: "+",
+    title: "Technologies",
+    subtitle: "Used",
+  },
+  {
+    to: 3,
+    from: 0,
+    duration: 1.5,
+    suffix: "+",
+    title: "Years of",
+    subtitle: "Coding",
+  },
 ];
 
 const Info = () => {
@@ -28,18 +48,21 @@ const Info = () => {
             height: "100%",
           }}
         >
-          <div className="flex h-full justify-around items-center text-4xl font-bold text-white">
+          <div className="flex h-full justify-around items-center text-3xl sm:text-5xl font-bold text-white px-4">
             {data.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center text-center select-none"
               >
                 <CountEffect
                   from={item.from}
                   to={item.to}
                   duration={item.duration}
+                  suffix={item.suffix}
                 />
-                <p className="font-thin text-xl">{item.label}</p>
+                <p className="font-light text-sm sm:text-xl mt-2 leading-tight">
+                  {item.title} <br /> {item.subtitle}
+                </p>
               </div>
             ))}
           </div>

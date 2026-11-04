@@ -2,8 +2,8 @@ import { animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-const CountEffect = ({ from = 0, to = 100, duration = 1 }) => {
-  const [count, setCount] = useState(0);
+const CountEffect = ({ from = 0, to = 100, duration = 1, suffix = "" }) => {
+  const [count, setCount] = useState(from);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   useEffect(() => {
@@ -18,7 +18,12 @@ const CountEffect = ({ from = 0, to = 100, duration = 1 }) => {
     }
   }, [isInView, from, to, duration]);
 
-  return <motion.div ref={ref}>{count}</motion.div>;
+  return (
+    <motion.div ref={ref} className="flex items-center">
+      {count}
+      {suffix}
+    </motion.div>
+  );
 };
 
 export default CountEffect;
